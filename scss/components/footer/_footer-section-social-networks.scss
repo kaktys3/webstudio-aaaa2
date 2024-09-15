@@ -1,0 +1,35 @@
+@import '../colors';
+@import '../utils/mixins';
+@import '../utils/placeholders';
+
+.h5-footer {
+    color: white;
+}
+
+.footer-section2-div-general {
+    text-align: center;
+
+    &__socisl-netwotka-img {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__icon {
+        background-color: map-get($colors, 'color-icon-footer');
+        @include transform(14px, none, none, background-color, 47%);
+
+        &:hover {
+            background-color: map-get($colors, 'color-a-button');
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-section2-div-general {
+        text-align: start;
+
+        &__socisl-netwotka-img {
+            justify-content: start;
+        }
+    }
+}

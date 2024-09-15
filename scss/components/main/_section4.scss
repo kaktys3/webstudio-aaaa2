@@ -1,0 +1,109 @@
+@import '../colors';
+@import '../utils/mixins';
+@import '../utils/placeholders';
+
+.section4-div-general {
+    flex-direction: column;
+    @include flexJastyfuContentAlingContent(none, none, flex, 94px 215px, 50px);
+}
+
+@media (max-width: 480px) {
+    .section4-div-general {
+        display: flex;
+        justify-content: center;
+        max-width: 480px
+    }
+}
+
+.personnel {
+    @extend %standart-alignment-flex;
+    gap: 30px;
+}
+
+@media (max-width: 480px) {
+    .personnel {
+        flex-direction: column
+    }
+
+    .personnel-user__information2 {
+margin: 0px;
+        
+        h5 {
+            color: #000;
+            padding: 0px;
+        }
+    }
+}
+
+
+.personnel-user {
+    &__img {
+        @include sizes(450px, 460px);
+    }
+
+    &__information1 {
+        background-color: map-get($colors, 'color-h1-address');
+        @extend %alignment-flex-by-y;
+        padding: 30px 0px 24px;
+    }
+
+    &__information2 {
+        @extend %alignment-flex-by-y;
+        padding: 0px 0px 16px;
+    }
+}
+
+.layout-icon-img {
+    display: flex;
+}
+
+.igor {
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.olga {
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mikola {
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.mihailo {
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.section4 {
+    background: map-get($colors, 'color-section4');
+}
+
+@media (min-width: 481px) {
+    .personnel {
+        flex-wrap: wrap;
+    }
+
+    .section4-div-general {
+        padding: 60px 0px;
+    }
+
+    .personnel-user__img {
+        width: 354px;
+        height: 374px;
+    }
+}
+
+@media (min-width: 320px),
+(max-width: 480px) {
+    .section4-div-general__h2 {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .personnel {
+        max-width: none;
+        flex-wrap: nowrap;
+    }
+}

@@ -1,0 +1,33 @@
+@import '../colors';
+@import '../utils/mixins';
+@import '../utils/placeholders';
+
+.section1 {
+    background-image: url(/img/Img26.png);
+}
+
+@media (max-width: 480px) {
+    .section1 {
+        background-image: url(/img/Header\ img.png);
+        background-repeat: no-repeat;
+        height: 400px;
+    }
+}
+
+.title {
+    @extend %alignment-flex-by-y;
+    padding: 200px 0px;
+    gap: 30px;
+
+    &__content {
+        @extend %alignment-flex-by-y;
+    }
+
+    &__button {
+        @extend %standart-alignment-flex;
+        padding: 10px 32px;
+        color: map-get($colors, 'color-h1-address');
+        background-color: map-get($colors, 'color-a-button');
+        border: map-get($colors, 'color-a-button');
+    }
+}

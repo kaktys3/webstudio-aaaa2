@@ -1,0 +1,23 @@
+@import './footer-section-address';
+@import './footer-section-social-networks';
+@import './footer-section-emeil';
+@import '../colors';
+@import '../utils/mixins';
+
+    footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
+        padding: 60px 0px;
+        background-color: map-get($colors, 'color-input');
+    }
+
+    @media (min-width: 481px) {
+        footer {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: normal;
+        }
+    }

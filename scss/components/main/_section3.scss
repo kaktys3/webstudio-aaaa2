@@ -1,0 +1,41 @@
+@import '../colors';
+@import '../utils/mixins';
+@import '../utils/placeholders';
+
+@media (max-width: 480px) {
+    .section3 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .section3 {
+        display: none;
+    }
+}
+
+.example {
+    padding: 94px 0px;
+
+    &__div-content {
+        gap: 30px;
+        @extend %standart-alignment-flex;
+        padding: 50px 0px 0px;
+    }
+
+    &__content {
+        position: relative;
+    }
+
+   &__content-namber1 {
+        @include exempelContent(27px 107px) ;
+    }
+
+    &__content-namber2 {
+        @include exempelContent(27px 113px) ;
+    }
+    
+    &__content-namber3 {
+        @include exempelContent(27px 94px) ;
+    }
+}

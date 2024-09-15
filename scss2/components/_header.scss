@@ -1,0 +1,76 @@
+@import '../components/colors';
+@import '../components/utils/mixins';
+
+.nav,
+.address {
+    display: none;
+}
+
+.logo-link {
+    @include headerLogo('color-standart-text', 0.78px, 26px);
+
+    .span {
+        @include headerLogo('color-a-button', 0.78px, 26px);
+    }
+}
+
+.menu {
+    display: flex;
+justify-content: space-between;
+}
+
+header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+@media (min-width: 481px) {
+
+    .nav,
+    .address {
+        display: flex;
+    }
+
+    .img-mobail {
+        display: none;
+    }
+
+    .menu {
+        align-items: center;
+        gap: 88px;
+    }
+
+    .nav {
+        gap: 32px;
+    }
+
+    .heder-container {
+        display: flex;
+        align-items: center;
+        gap: 90px;
+    }
+
+    .address {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    header {
+        padding: 21px 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu {
+        gap: 93px;
+    }
+
+    .address {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .heder-container {
+        gap: 312px;
+        justify-content: center;
+    }
+}

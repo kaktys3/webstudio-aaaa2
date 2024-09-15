@@ -1,0 +1,53 @@
+@import '../colors';
+@import '../utils/mixins';
+@import '../utils/placeholders';
+
+.footer-section3-div-general {
+    &__button {
+        display: flex;
+        background-color: map-get($colors, 'color-a-button');
+        border-radius: 5px;
+        @include stilyText2('color-h1-address', 16px, 700, none, 187%, 0.06em, none);
+        gap: 12px;
+        padding: 10px 28px 10px 31px;
+        border: 0px;
+
+
+        &:focus:hover {
+            animation-name: button2;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    }
+
+    .footer-section3-div-general__input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__term-of-entry {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-section3-div-general {
+        &__term-of-entry {
+            align-items: normal;
+        }
+    }
+
+    .footer-section3-div-general .footer-section3-div-general__input {
+        flex-direction: row;
+        gap: 12px;
+    }
+}
+
+.term-footer-osnowa {
+    background-color: map-get($colors, 'color-input');
+}

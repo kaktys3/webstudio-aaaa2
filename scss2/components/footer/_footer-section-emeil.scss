@@ -1,0 +1,48 @@
+@import '../colors';
+@import '../utils/mixins';
+
+
+.footer-section3-div-general {
+    &__button {
+        display: flex;
+        @include dimensions(200px, 50px, none);
+        text-align: center;
+        background-color: map-get($colors, 'color-a-button');
+        border-radius: 5px;
+        @include stilyText('color-h1-address', 16px, 700, none, 187%, 0.06em, none);
+        gap: 12px;
+
+        &:focus:hover {
+            animation-name: button2;
+            animation-duration: 1s;
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    }
+
+    .footer-section3-div-general__input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__term-of-entry {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-section3-div-general {
+        &__term-of-entry {
+            align-items: normal;
+        }
+    }
+
+    .footer-section3-div-general .footer-section3-div-general__input {
+        flex-direction: row;
+        gap: 12px;
+    }
+}

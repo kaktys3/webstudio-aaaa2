@@ -1,0 +1,125 @@
+@import '../components/colors';
+@import '../components/utils/mixins';
+@import '../components/utils/placeholders';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+h1 {
+    @include styliText(44px, uppercase, 900, none, 'color-h1-address', none, none, none, none);
+}
+
+.h5 {
+    color: #000;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+}
+
+h2 {
+    @include styliText(36px, none, 700, center, 'color-standart-text', normal, normal, 1.08px, none);
+    display: flex
+}
+
+h3 {
+    @include styliText(14px, uppercase, 700, none, 'color-standart-text', normal, normal, 00.42px, none);
+}
+
+h4 {
+    @include styliText(20px, none, 700, none, none, none, none, 00.03em, 0px 0px 2px);
+}
+
+h5 {
+    @include styliText(14px, uppercase, 700, none, 'color-standart-text', none, none, 00.03em, 0px 0px 10px);
+}
+
+p {
+    @include styliText(14px, none, 400, none, 'color-p', none, 171%, 00.03em, none);
+}
+
+a {
+    @include styliText(14px, none, 500, none, 'color-standart-text', normal, normal, 00.28px, none);
+    text-decoration: none;
+}
+
+a:focus {
+    color: map-get($colors, 'color-a-button');
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+@media (min-width: 481px) {
+    .heder-container {
+        display: flex;
+        gap: 90px;
+        padding: 21px 15px;
+    }
+}
+
+input {
+    width: 358px;
+    height: 50px;
+    @include sizes(358px, 50px);
+}
+
+@media (max-width: 768px) {
+    .icon-group-1 {
+        padding: 19px 88px;
+    }
+
+    .icon-group-2 {
+        padding: 18px 91px;
+    }
+
+    .icon-group-3 {
+        padding: 23px 91px;
+    }
+
+    .icon-group-4 {
+        padding: 21px 69px;
+    }
+
+    .icon-group-5 {
+        padding: 19px 80px;
+    }
+
+    .icon-group-6 {
+        padding: 19px 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-group-1 {
+        padding: 16px 78px;
+    }
+
+    .icon-group-2 {
+        padding: 15px 80px;
+    }
+
+    .icon-group-3 {
+        padding: 20px 79px;
+    }
+
+    .icon-group-4 {
+        padding: 21px 60px;
+    }
+
+    .icon-group-5 {
+        padding: 20px 70px;
+    }
+
+    .icon-group-6 {
+        padding: 18px 55px;
+    }
+}
